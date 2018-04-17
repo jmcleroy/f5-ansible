@@ -12,7 +12,7 @@
   #Upload the iApp templated downloaded above to the BIG-IP
   - name: Upload iApp template to BIG-IP
     bigip_iapp_template:
-      server: "10.192.XX.XXX"
+      server: "192.168.1.100"
       user: "admin"
       password: "admin"
       content: "{{ lookup('file', '/var/tmp/appsvcs_integration_v2.0.003.tmpl') }}"
@@ -26,7 +26,7 @@
       name: "HTTP_VS_With_L7Firewall"
       template: "appsvcs_integration_v2.0.003"
       parameters: "{{ lookup('file', 'final_iapp_with_asm.json') }}"
-      server: "10.192.XX.XXX"
+      server: "192.168.1.100"
       user: "admin"
       password: "admin"
       state: "present"
